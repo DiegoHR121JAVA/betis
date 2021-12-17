@@ -1,10 +1,13 @@
 package src;
 
+import java.util.Arrays;
+
 public class App {
     public static void main(String[] args) throws Exception {
  
         int dni= 18448531;
         letra(dni);
+
     }
     
     /**
@@ -26,4 +29,18 @@ public class App {
             }
 
         }
+
+    public void añade0 (int dni) {
+       int cifras= 0;    
+        while(dni!=0){             
+                dni = dni/10;         
+               cifras++;         
+        }
+
+        int [] ceros= new int [8-cifras];
+        
+        if(dni<cifras){
+            Arrays.copyOf(ceros, 0);
+        }
+    }    
 }
